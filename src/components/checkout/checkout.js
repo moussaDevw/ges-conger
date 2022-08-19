@@ -1,11 +1,21 @@
 import React, { Component, useState } from "react";
-import Gift from "../../assets/img/gift.png";
-import GiftPromo from "../../assets/img/gift_promo.png";
 import { Modal, Button } from "react-bootstrap";
-import { FacebookColor ,Twitter1Color ,LinkedinColor , GmailColor , WhatsappColor} from "sketch-icons";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Checkout = (props)=> {
     const [show, setShow] = useState(false)
+    const [isSolde, setIsSolde] = useState(false)
+    const handleClickSuccess = ()=>{
+      toast.error('🦄 Quelque chose ne va pas!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        })
+    }
     return (
       <>
         <Modal
@@ -55,7 +65,7 @@ const Checkout = (props)=> {
                       
                     </textarea>
                   </p>
-                  <h1>Demande de conger</h1>
+                  <button onClick={handleClickSuccess} className="btn btn-primary custom-btn-fill">Envoyer votre demande</button>
                 </div>
               </div>
             </div>
@@ -63,6 +73,10 @@ const Checkout = (props)=> {
         </Modal>
 
         <aside class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          />
           <div class="items-body container" style={{ padding: "10%" }}>
             <div class="promo-box">              
               <span>&nbsp; {props.information}</span>
@@ -163,6 +177,22 @@ const Checkout = (props)=> {
                         <h4 class="text-style-3 text-end">10</h4>
                       </div>
                     </div>
+                    <div class="row payment">
+                      <div class="col-7 col-xxl-7">
+                        <a href="/list-demande-de-conger" class="text-style-2">Demande accepté</a>
+                      </div>
+                      <div class="col">
+                        <h4 class="text-style-3 text-end">10</h4>
+                      </div>
+                    </div>
+                    <div class="row payment">
+                      <div class="col-7 col-xxl-7">
+                        <a href="/list-demande-de-conger" class="text-style-2">Demande rejeté</a>
+                      </div>
+                      <div class="col">
+                        <h4 class="text-style-3 text-end">10</h4>
+                      </div>
+                    </div>
                     {/* <div class="row payment">
                       <div class="col-7 col-xxl-7">
                         <a href="/liste-employers" class="text-style-2">Conger rejeter</a>
@@ -191,8 +221,12 @@ const Checkout = (props)=> {
                   class="btn btn-primary custom-btn-fill"
                   onClick={() => setShow({ show: true })}
                   type="button"
+                  disabled={isSolde}
+                  style={{backgroundColor: isSolde ? 'gray' : '', opacity:isSolde ? 0.4 : 1}}
                 >
-                  Demande de congé
+                  {
+                    isSolde ? "Solde épuisé" : "Demande de congé"
+                  }
                 </button>
                 ) : null
               }

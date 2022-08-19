@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap'); 
-
+/* h5 */
 :root {
   --pink : #ea1d63;
   --gray : #adadad;
@@ -14,6 +14,7 @@
 body {
   background: #fefefe;
   font-family: 'Poppins', sans-serif;
+  background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/0e/57/3b/a7/photo1jpg.jpg');
 }
 
 .logo{ 

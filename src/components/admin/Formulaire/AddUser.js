@@ -95,6 +95,7 @@ const AddUserForm = (props) =>{
                 <div class="col-md-12 col-sm-12 col-xs-12 col-12" style={{ "padding": '2%'}}>
                     <input type="file" />
                 </div>
+                <button className="btn btn-primary custom-btn-fill">Ajouter</button>
                 </div>
                 </div>
             </main> 

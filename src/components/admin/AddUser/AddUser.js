@@ -5,7 +5,7 @@ import { ModalDelete } from '../../modalDelete/ModalDelete';
 import Nav from '../../nav/nav';
 import AddUserForm from '../Formulaire/AddUser';
 
-const ListUser = ()=> {
+const AddUser = ()=> {
     const [show, setShow] = useState(false)
     return (
         <>
@@ -25,4 +25,4 @@ const ListUser = ()=> {
     );
 }
  
-export default ListUser;
+export default AddUser;

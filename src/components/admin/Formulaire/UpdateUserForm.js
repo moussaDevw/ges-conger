@@ -1,7 +1,9 @@
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 const UpdateUserForm = () =>{
         return ( 
             <main class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+              <ToastContainer />
                 <div class="items-body">
                 <div class="row cart-item">
                 <div class="col-md-6 col-sm-12 col-xs-6 col-3" style={{ "padding": '2%'}}>
@@ -94,6 +96,7 @@ const UpdateUserForm = () =>{
                 <div class="col-md-12 col-sm-12 col-xs-12 col-12" style={{ "padding": '2%'}}>
                     <input type="file" />
                 </div>
+                <button onClick={()=>toast('Compte modifié avec succé')} className="btn btn-primary custom-btn-fill">Modifier</button>
                 </div>
                 </div>
             </main> 

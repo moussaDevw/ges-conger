@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route , Routes } from 'react-router-dom'; 
+import AddUser from './admin/AddUser/AddUser';
 import ListUser from './admin/List-user/ListUser';
 import ListConger from './admin/ListConger/ListConger';
 import UpdateUser from './admin/UpdateUser/UpdateUser';
@@ -12,7 +13,7 @@ const routes = () => {
             <Route path="/profile" element={<Main />} />
             <Route path='/admin/tableau-de-bord' element={<ListUser />} />
             <Route path='/modifier-personnel' element={<UpdateUser />} />
-            <Route path='/ajouter-personnel' element={<UpdateUser />} />
+            <Route path='/ajouter-personnel' element={<AddUser />} />
             <Route path='/list-demande-de-conger' element={<ListConger />} />
         </Routes>
     )
