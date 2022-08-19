@@ -1,9 +1,29 @@
 import React from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Login = () =>{
-    
+        const loginBtn = ()=>{
+          toast.error('Email ou mot de passe incorrecte', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            })
+        }
         return ( 
             <main style={{margin:'auto', paddingTop:'150px'}} class="col-md-6 col-sm-12 col-xs-6 col-3">
+              <ToastContainer
+                  position="top-center"
+                  autoClose={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                />
                 <div style={{margin:'auto'}} class="items-body">
                 <div class="row cart-item">
                     <h3>Gestion des Congés</h3>
@@ -28,7 +48,7 @@ const Login = () =>{
                 <button
                   class="btn btn-primary custom-btn-fill"
                   type="button"
-                  onClick={<a href='/profile'>k</a>}
+                  onClick={loginBtn}
                 >
                   Se connecter
                 </button>

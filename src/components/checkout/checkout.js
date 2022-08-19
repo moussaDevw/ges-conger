@@ -5,8 +5,30 @@ import { ToastContainer, toast } from 'react-toastify';
 const Checkout = (props)=> {
     const [show, setShow] = useState(false)
     const [isSolde, setIsSolde] = useState(false)
-    const handleClickSuccess = ()=>{
-      toast.error('🦄 Quelque chose ne va pas!', {
+    const succes = ()=>{
+      toast.success('🦄 Votre demande à été envoyée avec succès!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        })
+    }
+    const champ = ()=>{
+      toast.error('Tous les champs sont obligatoires', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        })
+    }
+    const error = ()=>{
+      toast.error('Quelque chose ne va pas', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -65,7 +87,7 @@ const Checkout = (props)=> {
                       
                     </textarea>
                   </p>
-                  <button onClick={handleClickSuccess} className="btn btn-primary custom-btn-fill">Envoyer votre demande</button>
+                  <button onClick={succes} className="btn btn-primary custom-btn-fill">Envoyer votre demande</button>
                 </div>
               </div>
             </div>
@@ -98,7 +120,7 @@ const Checkout = (props)=> {
                       <h4 class="text-style-2">Solde de compensation</h4>
                     </div>
                     <div class="col">
-                      <h4 class="text-style-3 text-end">6</h4>
+                      <h4 class="text-style-3 text-end">1</h4>
                     </div>
                   </div>
                   <div class="row payment">
@@ -106,7 +128,7 @@ const Checkout = (props)=> {
                       <h4 class="text-style-2">Solde maladie</h4>
                     </div>
                     <div class="col">
-                      <h4 class="text-style-3 text-end">3</h4>
+                      <h4 class="text-style-3 text-end">1</h4>
                     </div>
                   </div>
                   <div class="row payment">
@@ -179,7 +201,7 @@ const Checkout = (props)=> {
                     </div>
                     <div class="row payment">
                       <div class="col-7 col-xxl-7">
-                        <a href="/list-demande-de-conger" class="text-style-2">Demande accepté</a>
+                        <a href="/demande-accepter" class="text-style-2">Demande accepté(es)</a>
                       </div>
                       <div class="col">
                         <h4 class="text-style-3 text-end">10</h4>
@@ -187,7 +209,7 @@ const Checkout = (props)=> {
                     </div>
                     <div class="row payment">
                       <div class="col-7 col-xxl-7">
-                        <a href="/list-demande-de-conger" class="text-style-2">Demande rejeté</a>
+                        <a href="/demande-rejeter" class="text-style-2">Demande rejeté(es)</a>
                       </div>
                       <div class="col">
                         <h4 class="text-style-3 text-end">10</h4>

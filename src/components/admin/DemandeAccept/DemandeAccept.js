@@ -4,7 +4,7 @@ import Checkout from '../../checkout/checkout';
 import { ModalDelete } from '../../modalDelete/ModalDelete';
 import Nav from '../../nav/nav';
 
-const ListConger = ()=> {
+const DemandeAccept = ()=> {
     const [show, setShow] = useState(false)
     const accept = ()=>{
         toast.success('Demande accepté avec succès', {
@@ -60,20 +60,14 @@ const ListConger = ()=> {
                             <p class="text-style-4">Vacance</p>
                         </div>
                         <div class="col-md-2 col-sm-3 col-xs-3 col-3" style={{ "padding": '2%'}}>
-                            <h5 class="text-style-2">Date de départ</h5>
-                            <p class="text-style-4">20/08/2022</p>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-3 col-3" style={{ "padding": '2%'}}>
                             <h5 class="text-style-2">Nombre de jour(s)</h5>
                             <p class="text-style-4">16</p>
                         </div>
-                    </div>
-                    <div class="row container py-4">
-                        <div class="col-7 col-md-3 col-lg-8 col-xl-8 col-xxl-3"><button onClick={accept} class="btn btn-primary custom-btn" type="button"><a>Accepter</a></button></div>
-                        <div class="col help-text">
-                            <h5><button onClick={rejeter} class="btn btn-primary custom-btn" type="button">Rejeter</button></h5>
+                        <div class="col-md-2 col-sm-3 col-xs-3 col-3" style={{ "padding": '2%'}}>
+                            <h5 class="text-style-2">Date de retour</h5>
+                            <p class="text-style-4">20/08/2020</p>
                         </div>
-                </div>
+                    </div>
                 </div>
             </main>
         </div>
@@ -84,4 +78,4 @@ const ListConger = ()=> {
     );
 }
  
-export default ListConger;
+export default DemandeAccept;

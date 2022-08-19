@@ -7,7 +7,7 @@ class Nav extends Component {
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <p>Gestion conger</p>
+            <p>Gestion congé</p>
           </a>
           <button
             class="navbar-toggler"

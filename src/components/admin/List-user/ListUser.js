@@ -37,7 +37,7 @@ const ListUser = ()=> {
         <div className='container'> 
         <div className='row'>
             <Checkout information="Tableau de bord" showBtn={false} showInfo={false} />
-            <Cart btnDelete={()=> setShow(true)} />
+            <Cart isShow={true} btnDelete={()=> setShow(true)} />
         </div>
         </div>
         <br />
